@@ -1,0 +1,2 @@
+busylight-for-humans >= 0.7.6
+paho-mqtt

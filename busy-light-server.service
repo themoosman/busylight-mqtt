@@ -1,0 +1,33 @@
+# This is a systemd startup file if you are on a system that
+# supports systemd and you want busy-light-server to work as an always 
+# on service
+
+# Make sure to update EnvironmentFile and WorkingDirectory
+
+# To make this persistent
+# sudo cp busy-light-server.service /etc/systemd/system
+# sudo systemctl enable busy-light-server.service
+# sudo chmod 644 /etc/systemd/system/busy-light-server.service
+# sudo systemctl enable blync-light-server
+
+
+[Unit]
+Description=Busy Light MQTT Server Service
+After=multi-user.target
+Conflicts=getty@tty1.service
+
+[Service]
+#Update path to application dir
+EnvironmentFile=/home/pi/git/busylight-mqtt/service.env
+#Change KillSignal to SIGINT, so the KeyboardInterrupt is caught.
+KillSignal=SIGINT
+Type=simple
+Restart=always
+RestartSec=10
+#Update path to application dir
+WorkingDirectory=/home/pi/git/busylight-mqtt
+ExecStart=/usr/bin/python3 app.py
+#StandardInput=tty-force
+
+[Install]
+WantedBy=multi-user.target
