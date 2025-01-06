@@ -30,7 +30,7 @@ The Python app can be run as a service.  See the instructions in the `.service` 
 ## Environment Variables
 
 | Variable | Description | Default |
-| --- | --- |
+| --- | --- | --- |
 | `LOG_FILENAME` | Location of log file | `/var/log/busylight_mqtt_server.log` |
 | `LOG_LEVEL` | Sets the level of logging | `INFO` |
 | `LOG_FORMAT` | Log file format | `%(message)s` |
