@@ -1,5 +1,5 @@
 # BlyncLight MQTT Server
-This is an BlyncLight API Server for the [Embrava BlyncLight](https://embrava.com/collections/blynclight-series).  This is intended to make the BlyncLight a network light and have its status updated by reading properties 
+This is a program to automate updating an [Embrava BlyncLight](https://embrava.com/collections/blynclight-series).  This is intended to make the BlyncLight a network light and have its status updated by reading an MQTT topic. 
 
 ## Why
 The ultimate goal is to control the light from Home Assistant.
