@@ -21,7 +21,7 @@ python3 -m pip install -r requirements.txt
 ````
 
 ### Create environment file
-The application needs a set of environment variables to run correctly.  Copy the `service.env.sample` to `service.env` and update the values to match your environment.
+The application needs a set of [environment variables](#environment-variables) to run correctly.  Copy the `service.env.sample` to `service.env` and update the values to match your environment.
 
 ### Service
 The Python app can be run as a service.  See the instructions in the `.service` files for instructions.
@@ -41,7 +41,7 @@ The Python app can be run as a service.  See the instructions in the `.service` 
 
 ### Entities
 
-Add the following entities 
+Add the following entities:
 
 ### input_select.yaml
 
@@ -207,7 +207,7 @@ actions:
 
 #### Sample Usage
 
-The following automation will turn the light on, blue in color, and not flashing at 08:00:00 every M, T, W, TH, F
+The following automation will turn the light `on`, `blue` in color, and `not flashing` at `08:00:00` every `M, T, W, TH, F`.
 
 ````yaml
 alias: toggle_busy_light_on
