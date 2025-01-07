@@ -16,7 +16,6 @@ This deployment requires an MQTT server as it will update it config from the sub
 
 ### Required Packages
 
-1) Install the necessary Python packages
 ````bash
 python3 -m pip install -r requirements.txt
 ````
