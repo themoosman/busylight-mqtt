@@ -5,7 +5,7 @@ This is a program to automate updating an [Embrava BlyncLight](https://embrava.c
 The ultimate goal is to control the light from Home Assistant.
 
 ## Requirements
-This application uses the [BusyLight for Humans](https://pypi.org/project/busylight-for-humans/) Python package to make the device calls.
+This application uses the [BusyLight for Humans](https://pypi.org/project/busylight-for-humans/) Python package to make the device calls.  The [install](#install) process below will install the necessary dependencies.  
 
 
 ## MQTT
