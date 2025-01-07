@@ -99,10 +99,10 @@ if __name__ == "__main__":
             mqtt_client.on_connect = on_connect
             mqtt_client.on_message = on_message
             mqtt_client.on_disconnect = on_disconnect
-            cert_path = "%s%s%s" % (str(os.path.dirname(os.path.abspath(
-                __file__))), "/certs/", "bundle.crt")
-            mqtt_client.tls_set(ca_certs=cert_path, tls_version=2)
-            mqtt_client.tls_insecure_set(True)
+            # cert_path = "%s%s%s" % (str(os.path.dirname(os.path.abspath(
+            #     __file__))), "/certs/", "bundle.crt")
+            # mqtt_client.tls_set(ca_certs=cert_path, tls_version=2)
+            # mqtt_client.tls_insecure_set(True)
             mqtt_client.connect(mqtt_broker_host, mqtt_port, keepalive=60)
             mqtt_client.loop_forever()  # Start networking daemon
         except Exception:
