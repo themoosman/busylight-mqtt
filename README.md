@@ -24,7 +24,7 @@ python3 -m pip install -r requirements.txt
 The application needs a set of [environment variables](#environment-variables) to run correctly.  Copy the `service.env.sample` to `service.env` and update the values to match your environment.
 
 ### Service
-The Python app can be run as a service.  See the instructions in the `.service` files for instructions.
+The Python app can be run as a service.  See the instructions in the [busy-light-server.service](busy-light-server.service) file for instructions.
 
 ## Environment Variables
 
