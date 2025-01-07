@@ -33,7 +33,7 @@ The Python app can be run as a service.  See the instructions in the [busy-light
 | `LOG_FILENAME` | Location of log file | `/var/log/busylight_mqtt_server.log` |
 | `LOG_LEVEL` | Sets the level of logging | `INFO` |
 | `LOG_FORMAT` | Log file format | `%(message)s` |
-| `MQTT_HOST` | Hostname of port of the MQTT server | `mqtt.apps.example.com` |
+| `MQTT_HOST` | Hostname of port of the MQTT server | `127.0.0.1` |
 | `MQTT_PORT` | Port of the MQTT server | `1883` |
 | `MQTT_TOPIC` | MQTT topic to monitor for state | `homeassistant/lights/busylight/state` |
 
