@@ -84,6 +84,11 @@ busy_light_flash:
     icon: mdi:power-plug
 ````
 
+The resulting entities should result in the ![following](images/entities.png)
+
+
+
+
 ### Automations
 
 The following automations are what I used to get and update the entities from MQTT.  YMMV
