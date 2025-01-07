@@ -84,7 +84,7 @@ busy_light_flash:
     icon: mdi:power-plug
 ````
 
-The resulting entities should result in the ![following](images/entities.png)
+The resulting entities should result in the following: ![list of entities](images/entities.png)
 
 
 
@@ -242,6 +242,29 @@ actions:
     action: input_select.select_option
 
 ````
+
+### Dashbaord
+
+Add them to a dashbaord...
+
+#### Config
+
+````yaml
+views:
+  - title: Busy Light
+    cards:
+      - type: entities
+        entities:
+          - entity: input_boolean.busy_light_enabled
+          - entity: input_boolean.busy_light_flash
+          - entity: input_number.busy_light_flash_speed
+          - entity: input_select.busy_light_color
+        title: Busy Light
+````
+
+#### Sample
+
+![sample dashboard](images/dashboard.png)
 
 
 ## TODO
