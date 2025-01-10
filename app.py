@@ -45,6 +45,8 @@ def setup_logger():
 
 def on_connect(client, userdata, flags, rc):
     logger.debug("Connected with result code {0}".format(str(rc)))
+    logger.info("Connected to MQTT host: %s:%d" % (cfg.MQTT_HOST, cfg.MQTT_PORT))
+    logger.info("Listening to MQTT Topic: %s" % (cfg.MQTT_TOPIC))
     client.subscribe((cfg.MQTT_TOPIC, 0))
 
 
@@ -99,10 +101,10 @@ if __name__ == "__main__":
             mqtt_client.on_connect = on_connect
             mqtt_client.on_message = on_message
             mqtt_client.on_disconnect = on_disconnect
-            # cert_path = "%s%s%s" % (str(os.path.dirname(os.path.abspath(
-            #     __file__))), "/certs/", "bundle.crt")
-            # mqtt_client.tls_set(ca_certs=cert_path, tls_version=2)
-            # mqtt_client.tls_insecure_set(True)
+            if cfg.MQTT_TLS:
+              cert_path = "%s%s%s" % (str(os.path.dirname(os.path.abspath(__file__))), "/certs/", cfg.MQTT_CERT)
+              mqtt_client.tls_set(ca_certs=cert_path, tls_version=2)
+              mqtt_client.tls_insecure_set(True)
             mqtt_client.connect(mqtt_broker_host, mqtt_port, keepalive=60)
             mqtt_client.loop_forever()  # Start networking daemon
         except Exception:

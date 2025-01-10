@@ -36,6 +36,8 @@ The Python app can be run as a service.  See the instructions in the [busy-light
 | `MQTT_HOST` | Hostname of port of the MQTT server | `127.0.0.1` |
 | `MQTT_PORT` | Port of the MQTT server | `1883` |
 | `MQTT_TOPIC` | MQTT topic to monitor for state | `homeassistant/lights/busylight/state` |
+| `MQTT_TLS` | Connect to the MQTT server using TLS | `False` |
+| `MQTT_CERT` | Cert to use for the MQTT server | `bundle.crt` |
 
 ## Home Assistant Integrations
 

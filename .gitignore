@@ -1,3 +1,4 @@
 *.pyc
-.env
-config.ini
+*.env
+*.crt
+*.pem
