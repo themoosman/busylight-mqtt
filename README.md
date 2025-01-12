@@ -1,4 +1,4 @@
-# BlyncLight MQTT Server
+# BusyLight MQTT Server
 This is a program to automate updating an [Embrava BlyncLight](https://embrava.com/collections/blynclight-series).  This is intended to make the BlyncLight a network light and have its status updated by reading an MQTT topic. 
 
 ## Why
