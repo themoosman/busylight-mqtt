@@ -3,7 +3,7 @@ import os
 # General Settings
 LOG_FILENAME = "/var/log/busylight_mqtt_server.log"
 LOG_LEVEL = os.environ.get('LOG_LEVEL', 'INFO')
-LOG_FORMAT = os.environ.get('LOG_FORMAT', '%(message)s')
+LOG_FORMAT = os.environ.get('LOG_FORMAT', '%(asctime)-15s %(levelname)-8s %(message)s')
 
 # MQTT
 MQTT_HOST = os.environ.get('MQTT_HOST', '127.0.0.1')
